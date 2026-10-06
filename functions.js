@@ -1,16 +1,18 @@
-// A function that takes input (a name) and returns output (a greeting).
-function greet(name) {
-  return `Hello, ${name}!`;
+// A function that outputs a square of an input
+function square(n) {
+  return n * n;
 }
 
-//The same idea as an arrow function.
-const double = (n) => n * 2;
-
-//A function with two output.
-function add(a, b) {
-  return a + b;
+// Boolean function.
+function isAdult(age) {
+   return age >= 18;
 }
 
-console.log(greet("Ray"));
-console.log(double(21));
-console.log(add(5, 7));
+// A function tha outputs full names.
+function fullName(first, last) {
+  return `${first} ${last}`;
+}
+
+console.log(square(9));
+console.log(isAdult(20));
+console.log(fullName("Ray", "Smith"));
