@@ -9,25 +9,16 @@ async function slowHello() {
 }
 
 //Fetch: get real data from the internet
-async function getUser(id) {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
-  const user = await response.json();
-  return user;
+async function getTodo() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/todo");
+  const todo = await response.json();
 }
+
+console.log(todo);
 
 async function main() {
   await slowHello();
-  
-  for (const id of [1, 2, 3, 4]) {
-    const user = await getUser(id);
-    console.log(`User ${id}: ${user.name}`);
-}
-  
-  const first = await getUser(1);
-  console.log(first.address.city);
-  console.log(first.company.name);
-  console.log(first.address.geo.lat);
-  console.log(`User: ${first.name} ${first.email}`);
+  await getTodo();
 }
 
 main();
